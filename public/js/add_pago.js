@@ -26,7 +26,8 @@ formPago_add.addEventListener('submit', function (event) {
         error: {
             title: "Oops...",
             text: "¡Ocurrio un error"
-        }
+        },
+        redirect: "./add_pago.html"
     }
 
     ejecutar(data, event)

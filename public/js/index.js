@@ -29,7 +29,8 @@ formLogin.addEventListener('submit', function (event) {
         error: {
             title: "Oops...",
             text: "Correo inválido o contraseña incorrecta"
-        }
+        },
+        redirect: "./principal.html"
     }
 
     ejecutar(data, event)

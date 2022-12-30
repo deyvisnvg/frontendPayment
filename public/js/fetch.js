@@ -14,15 +14,17 @@ const ejecutar = async (data, event) => {
         body: JSON.stringify(data.context)
     }).then(async response => {
         if (response.ok) {
-            let result = await response.json();
-            useLocalStorage(result);
+            if (typeof data.name == 'undefined') {
+                let result = await response.json();
+                useLocalStorage(result);
+            }
             Swal.fire(
                 data.success.title,
                 data.success.text,
                 'success'
             ).then(result => {
                 if (result.isConfirmed) {
-                    window.location.replace('./add_pago.html')
+                    window.location.replace(data.redirect)
                 }
             })
         } else {
