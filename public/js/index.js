@@ -1,7 +1,7 @@
 import { ejecutar } from "./fetch.js"
 import { get_credencial } from "./validar_login.js"
 
-const formLogin = document.getElementById("form");
+const formLogin = document.getElementById("formLogin");
 
 
 (function validar_credencial() {

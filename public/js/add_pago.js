@@ -1,6 +1,6 @@
 import { ejecutar } from "./fetch.js"
 import { validar_login, get_credencialJson } from "./validar_login.js"
-import { setUserForm } from "./principal.js"
+import { setUserForm } from "./setUser.js"
 
 const formPago_add = document.getElementById("formPago_add")
 

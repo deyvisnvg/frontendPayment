@@ -1,20 +1,9 @@
-import { get_credencial, validar_login } from "./validar_login.js"
+import { validar_login } from "./validar_login.js"
+import { setUserForm } from "./setUser.js"
 
-const user = document.getElementById('user');
-const user2 = document.getElementById('user2');
 const content = document.getElementById('content');
 
 validar_login();
-
-function setUserForm() {
-    const localStorageItem = get_credencial();
-
-    const parsedItem = JSON.parse(localStorageItem);
-    user.textContent = parsedItem.user.toUpperCase();
-    user2.textContent = parsedItem.user.toUpperCase();
-
-}
-
 
 async function getServices() {
     try {
@@ -50,7 +39,3 @@ function renderPayments(context) {
 
 getServices();
 setUserForm();
-
-export {
-    setUserForm
-}
